@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form method="GET" action="/test">
+    <input type="text" name="field1">
+    <button type="submit"> test get </button>
+  </form>
+
+  <form method="POST" action="/test">
+    <input type="text" name="field2">
+    <button type="submit"> test post </button>
+  </form>
+
+  <%result.forEach(element => {%>
+    <h3>Type: <%= element.type%></h3>
+    <p>Text: <%= element.text%></p>
+  </br> 
+
+  <form action="/facts" method="POST">
+    <input type="hidden" name="type" value="<%= element.type%>">
+    <input type="hidden" name="text" value="<%= element.text%>">
+    <button type="submit">Add to Fav Facts</button>
+  </form>
+  <%})%>
+</body>
+</html>

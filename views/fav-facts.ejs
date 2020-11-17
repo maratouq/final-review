@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%result.forEach(element => {%>
+    <h3>Type: <%= element.type%></h3>
+    <p>Text: <%= element.text%></p>
+    <a href="/facts/<%= element.id%>">View Details ..</a>
+  </br>
+  <% }) %>
+
+</body>
+</html>
